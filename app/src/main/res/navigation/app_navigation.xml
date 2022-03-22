@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/welcomeScreenFragment">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.searchcuisineappliction.presentation.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_groceryListFragment"
+            app:destination="@id/groceryListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/groceryListFragment"
+        android:name="com.example.searchcuisineappliction.presentation.GroceryListFragment"
+        android:label="fragment_grocery_list"
+        tools:layout="@layout/fragment_grocery_list" >
+        <action
+            android:id="@+id/action_groceryListFragment_to_countriesListFragment"
+            app:destination="@id/countriesListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/countriesListFragment"
+        android:name="com.example.searchcuisineappliction.presentation.CountriesListFragment"
+        android:label="fragment_countries_list"
+        tools:layout="@layout/fragment_countries_list" >
+        <action
+            android:id="@+id/action_countriesListFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.example.searchcuisineappliction.presentation.FoodListFragment"
+        android:label="fragment_food_list"
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.searchcuisineappliction.presentation.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" />
+</navigation>

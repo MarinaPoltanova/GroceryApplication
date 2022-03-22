@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.searchcuisineappliction.presentation.MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/appNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navGraph = "@navigation/app_navigation"
+            app:defaultNavHost="true">
+
+        </androidx.fragment.app.FragmentContainerView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
